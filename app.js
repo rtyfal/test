@@ -2,8 +2,11 @@ const express = require('express')
 const bodyParser = require("body-parser")
 const mainRouter = require("./routes/main")
 const userRouter = require("./routes/user")
+var cors = require('cors')
+
 const app = express()
 const port = 3000
+app.use(cors())
 
 app.use(bodyParser.json())
 
